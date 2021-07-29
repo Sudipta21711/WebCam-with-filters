@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest">
+	<script defer src="script.js"></script>
+	<script defer src="face-api.min.js"></script>
+	<title>Web-cam</title>
+	<style>
+		body{
+				
+				background-image: url("https://media.giphy.com/media/OK5LK5zLFfdm/giphy.gif");
+				background-repeat: no-repeat;
+                                Background-size: cover;
+				margin: 0px;
+				padding: 0px;
+				width: 100vw;
+				height: 100vh;
+				display: flex;
+				border-radius: 25px;
+				justify-content: center;
+				align-items: center;
+			}
+			#vid{
+
+				box-sizing: border-box;
+				border: 5px solid #f7f7f7;
+				background-color: rgb(19, 50, 116);
+				border-radius: 25px;
+				padding: 25px;
+			}
+			#vid:hover{
+				background-image: url("https://media.giphy.com/media/aRZ4vTsHnyW6A/giphy.gif");
+			}
+			#video{
+				position: relative;
+				margin-right: 0;
+				margin-left: 0;
+			}
+			h5{
+				box-sizing: border-box;
+				background-color: yellow;
+				position: relative;
+				margin-left: 0px;
+				font-size: 25px;
+				text-align: center;
+				font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+				color: rgb(19, 50, 116);;
+				border-radius: 5px;
+				cursor: pointer;
+
+			}
+			h5:hover{
+			background-color: rgb(19, 50, 116);;
+				color: white;
+			}
+			footer{
+				position: absolute;
+				margin-bottom: -140px;
+				text-align: center;
+				align-items: center;
+				justify-content: center;
+
+			}
+			#camicon{
+				cursor: grab;
+			}
+			#camicon:hover{
+				background-color: teal;
+				border-radius: 12px;
+			}
+
+			
+
+	</style>
+</head>
+<body>
+	<div id="vid">
+	<video id="video" width="520" height="420" autoplay mute></video>
+	<audio id="myAudio">
+		<source src="sound.mp3" type="audio/ogg">
+	  </audio>
+	<h5 onclick="playAudio()">Category : Wearable Watch</h5>
+	</div>
+
+	<footer>
+		<audio id="myAudio">
+			<source src="sound.mp3" type="audio/ogg">
+		  </audio>
+
+		<img id="camicon" onclick="playAudio()" src="icon.png"/>
+	</footer>
+</body>
+</html>
